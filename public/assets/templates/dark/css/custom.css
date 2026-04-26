@@ -1,0 +1,49 @@
+/* تكبير ووضوح النص داخل كروت الداشبورد */
+        .card .card-body,
+        .card .card-body * {
+            font-size: 18px !important;
+            font-weight: 700 !important;
+            color: #ffffff !important;
+        }
+
+        
+        /* تكبير عنوان المحفظة */
+.dashboard-card__header h5,
+.dashboard-card__header .title {
+    font-size: 22px !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+}
+
+/* تكبير الرقم الأبيض (الرصيد) */
+.dashboard-card__amount,
+.dashboard-card__amount * {
+    font-size: 24px !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+}
+/* ===== Fix selected country text invisible ===== */
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #000 !important;  /* لون النص عند اختيار الدولة */
+}
+
+.select2-container--default .select2-selection--single {
+    background-color: #fff !important; /* خلفية الحقل */
+    border: 1px solid #ccc !important;
+}
+
+.select2-results__option {
+    color: #000 !important; /* لون النص داخل القائمة */
+    background-color: #fff !important;
+}
+
+.select2-results__option--highlighted {
+    background-color: #e5e5e5 !important; /* لون العنصر عند التحديد */
+    color: #000 !important;
+}
+
+.select2-selection__arrow b {
+    border-color: #000 transparent transparent transparent !important;
+}
+

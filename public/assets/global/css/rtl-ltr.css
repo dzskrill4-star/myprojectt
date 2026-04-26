@@ -1,0 +1,87 @@
+/* Global RTL/LTR support scoped to html[dir] */
+
+/* Base direction */
+[dir="rtl"] html,
+[dir="rtl"] body {
+  direction: rtl;
+  unicode-bidi: embed;
+}
+
+[dir="ltr"] html,
+[dir="ltr"] body {
+  direction: ltr;
+  unicode-bidi: normal;
+}
+
+/* Text alignment defaults */
+[dir="rtl"] body,
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] h6,
+[dir="rtl"] p,
+[dir="rtl"] .card,
+[dir="rtl"] .icon,
+[dir="rtl"] .statistics,
+[dir="rtl"] .stats,
+[dir="rtl"] .section,
+[dir="rtl"] .content,
+[dir="rtl"] .title {
+  text-align: right;
+}
+
+[dir="ltr"] body,
+[dir="ltr"] h1,
+[dir="ltr"] h2,
+[dir="ltr"] h3,
+[dir="ltr"] h4,
+[dir="ltr"] h5,
+[dir="ltr"] h6,
+[dir="ltr"] p,
+[dir="ltr"] .card,
+[dir="ltr"] .icon,
+[dir="ltr"] .statistics,
+[dir="ltr"] .stats,
+[dir="ltr"] .section,
+[dir="ltr"] .content,
+[dir="ltr"] .title {
+  text-align: left;
+}
+
+/* Bootstrap-like utility flips */
+[dir="rtl"] .text-start { text-align: right !important; }
+[dir="rtl"] .text-end { text-align: left !important; }
+[dir="rtl"] .float-start { float: right !important; }
+[dir="rtl"] .float-end { float: left !important; }
+
+/* Logical margins paddings for common spacers */
+[dir="rtl"] .ms-auto { margin-left: 0 !important; margin-right: auto !important; }
+[dir="rtl"] .me-auto { margin-right: 0 !important; margin-left: auto !important; }
+[dir="rtl"] .ps-3 { padding-right: 1rem !important; padding-left: 0 !important; }
+[dir="rtl"] .pe-3 { padding-left: 1rem !important; padding-right: 0 !important; }
+
+/* Navigation & lists */
+[dir="rtl"] .breadcrumb { direction: rtl; }
+[dir="rtl"] .list-inline { direction: rtl; }
+
+/* Tables retain cell order but align right text */
+[dir="rtl"] table { direction: rtl; }
+[dir="rtl"] table th,
+[dir="rtl"] table td { text-align: right; }
+
+/* Forms */
+[dir="rtl"] label,
+[dir="rtl"] input,
+[dir="rtl"] textarea,
+[dir="rtl"] select { text-align: right; }
+
+/* Password eye toggle: move to left in RTL */
+[dir="rtl"] .password-show-hide { left: 20px !important; right: auto !important; }
+[dir="rtl"] input#your-password,
+[dir="rtl"] input#confirm-password,
+[dir="rtl"] input#res-password { padding-left: 50px !important; padding-right: 12px !important; }
+
+/* Minimal safeguards to avoid layout breakage */
+/* Only alignment flips; do not change flex/grid orders here */

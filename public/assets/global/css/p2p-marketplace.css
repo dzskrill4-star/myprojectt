@@ -1,0 +1,615 @@
+/* ================================================
+   P2P MARKETPLACE STYLES
+   ================================================ */
+
+:root {
+    --p2p-primary: #0d6efd;
+    --p2p-success: #198754;
+    --p2p-danger: #dc3545;
+    --p2p-warning: #ffc107;
+    --p2p-info: #0dcaf0;
+    --p2p-light: #f8f9fa;
+    --p2p-dark: #212529;
+    --p2p-border: #dee2e6;
+    --p2p-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+/* ================================================
+   GENERAL STYLES
+   ================================================ */
+
+.p2p-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.p2p-section-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--p2p-light);
+}
+
+.p2p-section-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--p2p-dark);
+    margin-bottom: 0.5rem;
+}
+
+.p2p-section-subtitle {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+/* ================================================
+   OFFER CARDS
+   ================================================ */
+
+.p2p-offer-card {
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+.p2p-offer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.p2p-offer-card .card-body {
+    padding: 1.5rem;
+}
+
+.p2p-offer-card img {
+    border: 2px solid var(--p2p-border);
+}
+
+/* Seller/Buyer Info Section */
+.p2p-offer-card .seller-info,
+.p2p-offer-card .buyer-info {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background: var(--p2p-light);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.p2p-offer-card .seller-info img,
+.p2p-offer-card .buyer-info img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 1rem;
+    border-radius: 50%;
+}
+
+.p2p-offer-card .seller-name,
+.p2p-offer-card .buyer-name {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.p2p-offer-card .seller-stats,
+.p2p-offer-card .buyer-stats {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+.p2p-offer-card .star-icon {
+    color: #ffc107;
+    margin-right: 0.25rem;
+}
+
+/* Price Display */
+.p2p-price-box {
+    background: linear-gradient(135deg, var(--p2p-primary), #0d5edc);
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.p2p-price-amount {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.p2p-price-currency {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Offer Details */
+.p2p-details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.p2p-detail-item {
+    padding: 0.75rem;
+    background: var(--p2p-light);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.p2p-detail-label {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-bottom: 0.25rem;
+    display: block;
+}
+
+.p2p-detail-value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--p2p-dark);
+}
+
+/* Payment Methods */
+.p2p-payment-methods {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.p2p-payment-badge {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    background: var(--p2p-light);
+    border: 1px solid var(--p2p-border);
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.p2p-payment-badge.accepted {
+    background: var(--p2p-success);
+    color: white;
+    border-color: var(--p2p-success);
+}
+
+/* Trading Time */
+.p2p-trading-time {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    background: #fff3cd;
+    border-left: 3px solid var(--p2p-warning);
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.p2p-trading-time i {
+    margin-right: 0.5rem;
+    color: var(--p2p-warning);
+}
+
+/* ================================================
+   MY OFFERS CARD
+   ================================================ */
+
+.p2p-my-offer-card {
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.p2p-my-offer-card:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.p2p-my-offer-card .card-body {
+    padding: 1.5rem;
+}
+
+.p2p-my-offer-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.p2p-my-offer-stat {
+    padding: 1rem;
+    background: var(--p2p-light);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.p2p-my-offer-stat-label {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+}
+
+.p2p-my-offer-stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--p2p-primary);
+}
+
+/* ================================================
+   ORDER DETAILS MODAL
+   ================================================ */
+
+.p2p-order-details {
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.p2p-order-section {
+    margin-bottom: 1.5rem;
+}
+
+.p2p-order-section-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--p2p-dark);
+}
+
+/* ================================================
+   HISTORY TABLE
+   ================================================ */
+
+.p2p-history-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.p2p-history-table thead {
+    background: var(--p2p-light);
+    border-bottom: 2px solid var(--p2p-border);
+}
+
+.p2p-history-table th {
+    padding: 1rem;
+    text-align: right;
+    font-weight: 600;
+    color: var(--p2p-dark);
+}
+
+.p2p-history-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--p2p-border);
+}
+
+.p2p-history-table tr:hover {
+    background: var(--p2p-light);
+}
+
+.p2p-history-partner {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.p2p-history-partner img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.p2p-history-status {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.p2p-history-status.completed {
+    background: #d4edda;
+    color: #155724;
+}
+
+.p2p-history-status.cancelled {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.p2p-history-status.pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+/* ================================================
+   TABS
+   ================================================ */
+
+.nav-tabs {
+    border-bottom: 2px solid var(--p2p-border);
+}
+
+.nav-tabs .nav-link {
+    color: #6c757d;
+    border: none;
+    border-bottom: 3px solid transparent;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link:hover {
+    color: var(--p2p-primary);
+    border-bottom-color: transparent;
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--p2p-primary);
+    background: none;
+    border-bottom-color: var(--p2p-primary);
+}
+
+/* ================================================
+   BUTTONS
+   ================================================ */
+
+.p2p-btn-primary {
+    background: var(--p2p-primary);
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.p2p-btn-primary:hover:not(:disabled) {
+    background: #0d5edc;
+    transform: translateY(-2px);
+    box-shadow: 0 0.25rem 0.75rem rgba(13, 110, 253, 0.3);
+}
+
+.p2p-btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.p2p-btn-success {
+    background: var(--p2p-success);
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.p2p-btn-success:hover:not(:disabled) {
+    background: #157347;
+    transform: translateY(-2px);
+    box-shadow: 0 0.25rem 0.75rem rgba(25, 135, 84, 0.3);
+}
+
+/* ================================================
+   ALERTS & WARNINGS
+   ================================================ */
+
+.p2p-alert {
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border-left: 4px solid;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.p2p-alert.info {
+    background: #cfe2ff;
+    border-left-color: #0dcaf0;
+    color: #084298;
+}
+
+.p2p-alert.warning {
+    background: #fff3cd;
+    border-left-color: #ffc107;
+    color: #664d03;
+}
+
+.p2p-alert.danger {
+    background: #f8d7da;
+    border-left-color: #dc3545;
+    color: #842029;
+}
+
+.p2p-alert i {
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+}
+
+/* ================================================
+   BADGES
+   ================================================ */
+
+.p2p-badge {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.p2p-badge.verified {
+    background: #d4edda;
+    color: #155724;
+}
+
+.p2p-badge.unverified {
+    background: #e2e3e5;
+    color: #383d41;
+}
+
+.p2p-badge.active {
+    background: #d4edda;
+    color: #155724;
+}
+
+.p2p-badge.paused {
+    background: #fff3cd;
+    color: #856404;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN
+   ================================================ */
+
+@media (max-width: 768px) {
+    .p2p-details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .p2p-my-offer-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .p2p-offer-card {
+        margin-bottom: 1rem;
+    }
+
+    .p2p-price-box {
+        font-size: 1.25rem;
+    }
+
+    .p2p-price-amount {
+        font-size: 1.5rem;
+    }
+
+    .nav-tabs {
+        flex-wrap: wrap;
+    }
+
+    .nav-tabs .nav-link {
+        font-size: 0.9rem;
+        padding: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .p2p-history-table {
+        font-size: 0.85rem;
+    }
+
+    .p2p-history-table th,
+    .p2p-history-table td {
+        padding: 0.75rem;
+    }
+
+    .p2p-payment-methods {
+        gap: 0.25rem;
+    }
+
+    .p2p-payment-badge {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.5rem;
+    }
+}
+
+/* ================================================
+   DARK MODE SUPPORT (Optional)
+   ================================================ */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --p2p-light: #1e1e1e;
+        --p2p-dark: #f0f0f0;
+    }
+
+    .p2p-detail-item,
+    .p2p-payment-badge,
+    .p2p-my-offer-stat {
+        background: #2d2d2d;
+        color: #f0f0f0;
+    }
+
+    .p2p-offer-card {
+        background: #2d2d2d;
+        color: #f0f0f0;
+    }
+}
+
+/* ================================================
+   ANIMATIONS
+   ================================================ */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.p2p-fade-in {
+    animation: fadeIn 0.3s ease;
+}
+
+.p2p-slide-in-up {
+    animation: slideInUp 0.3s ease;
+}
+
+/* ================================================
+   UTILITIES
+   ================================================ */
+
+.p2p-text-muted {
+    color: #6c757d;
+}
+
+.p2p-text-danger {
+    color: var(--p2p-danger);
+}
+
+.p2p-text-success {
+    color: var(--p2p-success);
+}
+
+.p2p-text-warning {
+    color: var(--p2p-warning);
+}
+
+.p2p-cursor-disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.p2p-no-data {
+    padding: 3rem 1rem;
+    text-align: center;
+    color: #6c757d;
+}
+
+.p2p-no-data i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}

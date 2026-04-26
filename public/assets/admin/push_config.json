@@ -1,0 +1,4 @@
+{
+  "notice": "This file no longer contains secrets.",
+  "action_required": "Upload your Firebase service-account JSON via Admin > Push Notification Settings. The server stores it under storage/app/firebase (non-public)."
+}
